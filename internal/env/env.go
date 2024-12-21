@@ -28,6 +28,7 @@ func GetInt(key string, fallback int) int {
 	valAsInt, err := strconv.Atoi(val)
 	if err != nil {
 		log.Fatal(err)
+		return fallback
 	}
 	return valAsInt
 }
