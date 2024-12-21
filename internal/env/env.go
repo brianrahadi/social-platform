@@ -15,6 +15,9 @@ func GetString(key, fallback string) string {
 		return fallback
 	}
 	val := os.Getenv(key)
+	if val == "" {
+		return fallback
+	}
 	return val
 }
 
